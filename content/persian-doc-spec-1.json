@@ -1,0 +1,597 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/persian-doc-spec-1.schema.json",
+  "title": "Persian Document Specification",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "frontMatter": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "titlePage": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "rtl": {
+              "type": "boolean"
+            },
+            "lines": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "lineSpacing": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0.5,
+              "maximum": 3
+            },
+            "alignment": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "left",
+                "right",
+                "center",
+                "justify",
+                null
+              ]
+            }
+          }
+        },
+        "approvalPage": {
+          "$ref": "#/$defs/rtlInclude"
+        },
+        "declaration": {
+          "$ref": "#/$defs/rtlInclude"
+        },
+        "dedication": {
+          "$ref": "#/$defs/rtlInclude"
+        },
+        "acknowledgements": {
+          "$ref": "#/$defs/rtlInclude"
+        }
+      }
+    },
+    "abstracts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fa": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "style": {
+              "type": "string"
+            },
+            "heading": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "keywordsLabel": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "keywordsSeparator": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "en": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "style": {
+              "type": "string"
+            },
+            "heading": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "rtl": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "digits": {
+              "$ref": "#/$defs/digits"
+            }
+          }
+        }
+      }
+    },
+    "lists": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "toc": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "include": {
+              "type": "boolean"
+            },
+            "levels": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9
+            },
+            "rtl": {
+              "type": "boolean"
+            },
+            "digits": {
+              "$ref": "#/$defs/digits"
+            }
+          }
+        },
+        "listOfFigures": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "rtl": {
+              "type": "boolean"
+            },
+            "digits": {
+              "$ref": "#/$defs/digits"
+            }
+          }
+        },
+        "listOfTables": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "rtl": {
+              "type": "boolean"
+            },
+            "digits": {
+              "$ref": "#/$defs/digits"
+            }
+          }
+        }
+      }
+    },
+    "figuresAndTables": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "figureCaptionPlacement": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "above",
+            "below",
+            null
+          ]
+        },
+        "tableCaptionPlacement": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "above",
+            "below",
+            null
+          ]
+        },
+        "captionStyle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tableDirection": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "rtl",
+            "ltr",
+            null
+          ]
+        },
+        "allowRowBreaking": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "footnotesEndnotes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "footnotes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "restartEachPage": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "digits": {
+              "$ref": "#/$defs/digits"
+            },
+            "separatorLinePercentWidth": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        },
+        "endnotes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "use": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "crossReferences": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "digits": {
+          "$ref": "#/$defs/digits"
+        },
+        "formats": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "figure": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "table": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "equation": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "chapter": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "section": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "appendices": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "labelPattern": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lettersFa": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "restartFigureTableNumbers": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "bibliography": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "titleFa": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "style": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rtl": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "digits": {
+          "$ref": "#/$defs/digits"
+        },
+        "hangingIndent": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^\\d+(\\.\\d+)?(cm|mm|in|pt)$"
+        },
+        "entrySpacing": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 3
+        }
+      }
+    },
+    "math": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "direction": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "rtl",
+            "ltr",
+            null
+          ]
+        },
+        "equationNumbering": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "byChapter": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "digits": {
+              "$ref": "#/$defs/digits"
+            },
+            "format": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "alignment": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "left",
+                "right",
+                null
+              ]
+            }
+          }
+        }
+      }
+    },
+    "pageLayoutExtras": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lineNumbers": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            }
+          }
+        },
+        "sectionBreaks": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "frontMatter": {
+              "$ref": "#/$defs/sectionBreakKind"
+            },
+            "mainMatter": {
+              "$ref": "#/$defs/sectionBreakKind"
+            },
+            "appendices": {
+              "$ref": "#/$defs/sectionBreakKind"
+            }
+          }
+        }
+      }
+    },
+    "applicationHints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "msword": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "numeralOption": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "Arabic",
+                "Hindi",
+                "Context",
+                "System",
+                null
+              ]
+            },
+            "rtlDocumentDefault": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "compatibility": {
+              "type": "object",
+              "additionalProperties": true
+            },
+            "persianDigitsInFields": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          }
+        },
+        "libreoffice": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "complexTextLayout": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "digits": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "FARSI",
+                "ARABIC",
+                "SYSTEM",
+                null
+              ]
+            },
+            "kashida": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          }
+        },
+        "fontsNote": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "$defs": {
+    "rtlInclude": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "rtl": {
+          "type": "boolean"
+        },
+        "include": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "rtl",
+        "include"
+      ]
+    },
+    "digits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "arabext",
+        "latn",
+        "auto",
+        "FARSI",
+        null
+      ]
+    },
+    "sectionBreakKind": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "nextPage",
+        "oddPage",
+        "evenPage",
+        "continuous",
+        null
+      ]
+    }
+  }
+}

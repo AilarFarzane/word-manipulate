@@ -1,0 +1,96 @@
+{
+  "section": {
+    "break": "oddPage",
+    "mirrorMargins": true
+  },
+
+  "header": {
+      "text": "فصل اول: مقدمه",
+      "style": "HeaderRight*" 
+  },
+
+  "footer": {
+      "text": "definition of something",
+      "style": "Footer" 
+  },
+
+  "chapter": {
+    "title": "فصل هفتم: نگارش صحیح",
+    "style": "Heading 1",
+    "intro": [
+     {
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, risus ut gravida luctus, justo justo porttitor nulla, nec pulvinar erat nunc eget metus. Suspendisse potenti. Integer ac orci magna. Nulla facilisi. Duis egestas lectus et mauris pretium, vitae vestibulum eros finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus bibendum, arcu ac scelerisque malesuada, ligula risus accumsan purus, ac porttitor magna sapien eget nunc. Sed elementum eu sem a volutpat. Vestibulum suscipit faucibus nulla, vitae sagittis magna luctus sit amet. Curabitur vehicula augue ut est ultricies, eget rhoncus orci pretium. Quisque euismod, ex vitae laoreet malesuada, felis lorem volutpat lacus, vitae egestas mauris nunc sit amet elit. Morbi fermentum, lectus non tincidunt egestas, lacus arcu feugiat lacus, a aliquam leo risus ac tortor. Pellentesque ac sagittis nibh. Etiam scelerisque erat at lacus pharetra, non mattis mauris volutpat. Sed nec odio in neque vestibulum malesuada. Curabitur sed dolor in leo mattis fermentum. Donec vel pretium lorem. Pellentesque sollicitudin interdum sem, eget gravida ligula. Aliquam erat volutpat. Aenean vestibulum turpis ut lacus iaculis, sit amet gravida lorem bibendum. Maecenas fermentum suscipit nisl nec posuere. Aenean feugiat posuere felis sit amet convallis. Donec vehicula tincidunt eros, vitae posuere orci posuere non. Sed vehicula ligula magna, sed sodales lorem malesuada id. Nam tempor sapien sit amet augue tincidunt, nec consequat turpis imperdiet. Donec nec purus malesuada, dignissim nibh nec, commodo erat. Vivamus id nunc id justo hendrerit efficitur. Morbi vulputate egestas nisl nec iaculis. Pellentesque tincidunt posuere lectus, vel tristique purus volutpat ac. Cras vitae laoreet magna. Sed porttitor, velit nec volutpat porttitor, sapien turpis sollicitudin quam, ut faucibus nulla enim et magna. Suspendisse potenti. Integer fringilla, sem sit amet euismod malesuada, ligula lorem bibendum leo, sed malesuada erat nunc nec lacus. Nulla facilisi. Proin malesuada magna at turpis egestas, in laoreet nibh vehicula. Cras dictum nunc non semper hendrerit. Aliquam nec nunc sapien. Quisque at ex magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec egestas mattis mauris, ut tincidunt nisl suscipit nec. Morbi quis nunc nec lectus ultricies fermentum. Ut sed libero sit amet purus porttitor facilisis. Aenean suscipit, risus a iaculis venenatis, neque sapien faucibus libero, eget ultrices elit augue eget magna. Integer vitae ex suscipit, ultrices risus nec, volutpat nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eget sapien eget mauris bibendum tincidunt. Fusce nec tortor eu nunc finibus euismod. Nulla fringilla vel turpis vitae imperdiet. Sed rhoncus felis orci, sit amet malesuada nunc commodo sed. Curabitur nec nisl dignissim, feugiat metus a, fermentum sapien."
+, "style": "Normal"
+}
+,
+      {
+        "text": "اگر تعداد سطر و ستون جدول شما، کمتر از جدول انتخابی است، در این حالت نیاز به حذف تعدادی سطر یا ستون دارید. برای اینکار بر روی جدول کلیک راست کرده و با انتخاب گزینهDeletecells…، پنجره زیر باز می‌شود (شکل3)، برای حذف سطر اضافی گزینه سوم و برای حذف ستون اضافی گزینه چهارم را انتخاب کنید.",
+        "style": "Normal"
+      }
+
+    ],
+    "sections": [
+      {
+        "title": "فارسی‌نویسی",
+        "style": "Heading 2",
+        "content": [
+          { "text": "متن بخش نمونه که با سبک Normal رندر می‌شود.", "style": "Normal" },
+
+          {"upload": [
+            {
+              "image": "content/banzen.png", 
+              "style": "Style Centered" 
+            },
+            {
+              "text": "شکل1: نحوه ساخت قسمت جدید",
+              "style": "Pic Title*"
+            }
+          ]
+        },
+
+          { "list": [
+            {
+              "text": "مورد اول ",
+              "style": "Bulet"
+            },
+            {
+              "text": "مورد دوم",
+              "style": "Bulet" 
+            }
+          ]
+          },
+
+          { 
+            "list": [
+            {
+              "text": "بولت اول",
+              "style": "Bulet*"
+            },
+            {
+              "text": "بولت دوم",
+              "style": "Bulet*"  
+            }
+            ]
+          }
+        ],
+        "sub_sections": [
+          {
+            "title": "ویرگول و نقطه",
+            "style": "Heading 3",
+            "content": [
+              { "text": "متن زیر بخش اول" , "style":"Normal"}
+            ]
+          }
+        ]
+      },
+
+      {
+        "title": "نمونه زیر بخش دوم",
+        "style": "Heading 2",
+        "content": [
+          { "text": "این یک پاراگراف عادی است." , "style": "Normal"}
+        ]
+      }
+    ]
+  }
+}
